@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:vedas_college/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routes = "/loginScreen";
@@ -33,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
           const Text(
             "Sign in to Continue",
             style: TextStyle(
-                color: Colors.green,
+                color: Color.fromRGBO(26, 47, 89, 50),
                 fontSize: 20,
                 fontWeight: FontWeight.w900),
           ),
@@ -98,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
             margin: const EdgeInsets.symmetric(horizontal: 30),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
+                  backgroundColor: const Color.fromRGBO(26, 47, 89, 50),
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   textStyle: const TextStyle(
                     fontSize: 16,
@@ -111,11 +112,43 @@ class _LoginScreenState extends State<LoginScreen> {
               },
               child: const Center(
                 child: Text(
-                  "Sign in",
+                  "Log in",
                 ),
               ),
             ),
-          )
+          ),
+
+              const SizedBox(
+                height: 16,
+              ),
+
+
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 30),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromRGBO(26, 47, 89, 50),
+                      padding: const EdgeInsets.symmetric(vertical: 15),
+                      textStyle: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      )
+                  ),
+                  onPressed: () {
+                    Navigator.push(context,MaterialPageRoute(builder: (context) => const SignupScreen()));
+                  },
+                  child: const Center(
+                    child: Text(
+                      "Sign up",
+                    ),
+                  ),
+                ),
+              ),
+
+
+
+
 
               // InkWell(
               //   onTap: (){
@@ -130,14 +163,21 @@ class _LoginScreenState extends State<LoginScreen> {
               //         Radius.circular(10),
               //       )
               //     ),
+              //
+              //     @override
+              //     onPressed:(){
+              //       .pushReplacementNamed(SignupScreen.routes);
+              //     }
+              //
               //     child: const Center(
               //       child: Text(
-              //         "Sign in",
+              //         "Sign up",
               //         style: TextStyle(color: Colors.white),
               //       ),
               //     ),
               //   ),
               // )
+
             ],
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:vedas_college/product_screen.dart';
 import 'package:vedas_college/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -136,7 +137,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       )
                   ),
                   onPressed: () {
-                    Navigator.push(context,MaterialPageRoute(builder: (context) => const SignupScreen()));
+                    // Navigator.push(context,MaterialPageRoute(builder: (context) => const SignupScreen()));
+                    Navigator.of(context).pushNamed(ProductScreen.routes);
                   },
                   child: const Center(
                     child: Text(

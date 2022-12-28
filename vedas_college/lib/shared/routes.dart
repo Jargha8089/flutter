@@ -1,4 +1,5 @@
 import 'package:vedas_college/login_screen.dart';
+import 'package:vedas_college/product_screen.dart';
 import 'package:vedas_college/signup_screen.dart';
 import 'package:vedas_college/splash_screen.dart';
 
@@ -7,5 +8,6 @@ class Routes {
     SplashScreen.routes: (ctx) => const SplashScreen(),
     LoginScreen.routes: (ctx) => const LoginScreen(),
     SignupScreen.routes: (ctx) => const SignupScreen(),
+    ProductScreen.routes: (ctx) => const ProductScreen(),
   };
 }
